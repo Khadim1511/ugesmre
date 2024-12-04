@@ -1,10 +1,10 @@
 import psycopg2
 
 conn = psycopg2.connect(
-    dbname='users_db',
-    user='your_username',
-    password='your_password',
-    host='localhost',
+    dbname='recen_xl1y',
+    user='recen_xl1y_user',
+    password='9VE7TJGshNIkqYFzTEzFS95bLXsL1ZDj',
+    host='dpg-ct84e4pu0jms73aun6p0-a',
     port='5432'
 )
 cursor = conn.cursor()
