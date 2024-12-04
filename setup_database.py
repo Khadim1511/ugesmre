@@ -1,15 +1,19 @@
-import sqlite3
+import psycopg2
 
-# Créez une connexion à la base de données SQLite
-conn = sqlite3.connect('users.db')
+conn = psycopg2.connect(
+    dbname='users_db',
+    user='your_username',
+    password='your_password',
+    host='localhost',
+    port='5432'
+)
 cursor = conn.cursor()
 
-# Création de la table users
 cursor.execute('''
 CREATE TABLE IF NOT EXISTS users (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    id SERIAL PRIMARY KEY,
     nom_prenom TEXT NOT NULL,
-    date_naissance TEXT NOT NULL,
+    date_naissance DATE NOT NULL,
     annee_arrivee TEXT NOT NULL,
     email TEXT NOT NULL,
     etablissement TEXT NOT NULL,
@@ -21,4 +25,5 @@ CREATE TABLE IF NOT EXISTS users (
 
 print("Table 'users' créée avec succès.")
 conn.commit()
+cursor.close()
 conn.close()
