@@ -6,9 +6,9 @@ import uuid
 def get_db_connection():
     conn = psycopg2.connect(
         dbname='recen',
-        user='recen_user',
-        password='KRfg6g6AzqfoANjQHJC2xlaRWaLIqkSO',
-        host='dpg-ct3s062j1k6c73ebpdog-a',
+        user='recen_xl1y_user',
+        password='9VE7TJGshNIkqYFzTEzFS95bLXsL1ZDj',
+        host='dpg-ct84e4pu0jms73aun6p0-a',
         port='5432'  # Port par défaut de PostgreSQL
     )
     return conn
