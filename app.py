@@ -4,6 +4,7 @@ import os
 import uuid
 
 
+DATABASE_URL = "postgresql://recen_xl1y_user:9VE7TJGshNIkqYFzTEzFS95bLXsL1ZDj@dpg-ct84e4pu0jms73aun6p0-a.oregon-postgres.render.com/recen_xl1y"
 def get_db_connection():
     conn = psycopg2.connect(
         dbname='recen',
@@ -11,7 +12,6 @@ def get_db_connection():
         password='9VE7TJGshNIkqYFzTEzFS95bLXsL1ZDj',
         host='dpg-ct84e4pu0jms73aun6p0-a',
         port='5432'  # Port par défaut de PostgreSQL
-        DATABASE_URL = "postgresql://recen_xl1y_user:9VE7TJGshNIkqYFzTEzFS95bLXsL1ZDj@dpg-ct84e4pu0jms73aun6p0-a.oregon-postgres.render.com/recen_xl1y"
 
     )
     return conn
